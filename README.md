@@ -27,7 +27,7 @@ El protocolo HTTP opera en un modelo de solicitud-respuesta, donde un cliente en
 ### What is HTTPS?
 A version of HTTP that secure the traffic between your browser and the website by encrypting it.
 
-### ¿Qué es un protocolo de red?
+### Qué es un protocolo de red?
 Un protocolo de red es un conjunto de reglas establecidas que especifican cómo formatear, enviar y recibir datos para que los puntos finales de la red informática, incluidos ordenadores, servidores, enrutadores y máquinas virtuales, puedan comunicarse a pesar de las diferencias en sus infraestructuras, diseños o estándares subyacentes.
 
 ### What is a codebase?
@@ -48,3 +48,43 @@ Transmission Control Protocol/Internet Protocol, is a suite of communications pr
 
 ### Qué tipo de registro DNS es www en www.foobar.com?
 El tipo de registro DNS para "www" en "www.foobar.com" es un registro de tipo CNAME (Canonical Name). El registro CNAME se utiliza para asociar un subdominio, en este caso "www", con el nombre de dominio principal "foobar.com". Al utilizar un registro CNAME, el subdominio "www" redirige a la misma dirección IP que el dominio principal "foobar.com". Esto permite que los usuarios accedan al sitio web utilizando tanto "www.foobar.com" como "foobar.com" y sean redirigidos al mismo destino.
+
+
+## Task 0
+![Diagram](https://i.imgur.com/mvbqBIY.png)
+
+
+### Que es un Load Balancer?
+Es un componente de infraestructura utilizado en entornos de red y servidores para distribuir de manera eficiente la carga de trabajo o tráfico entrante entre múltiples servidores o nodos de backend. Su objetivo principal es mejorar el rendimiento, la escalabilidad y la disponibilidad de las aplicaciones o sitios web al garantizar una distribución equitativa de las solicitudes de los clientes.
+
+### Configuración activa-activa: 
+En este modo, todos los balanceadores de carga están activos y reciben tráfico de los clientes. El tráfico se distribuye entre los servidores de backend de manera equitativa y los balanceadores de carga comparten la carga de trabajo. Si uno de los balanceadores de carga falla, los demás continúan gestionando el tráfico.
+
+### Configuración activa-pasiva:
+En este modo, solo un balanceador de carga está activo y recibe el tráfico de los clientes, mientras que los demás balanceadores de carga permanecen en un estado pasivo. El balanceador de carga activo maneja todas las solicitudes y distribuye el tráfico a los servidores de backend. Si el balanceador de carga activo falla, otro balanceador de carga pasivo toma el control y asume el papel de balanceador de carga activo.
+
+### The MySQL Master-Replica cluster
+Utiliza la replicación para mantener los datos sincronizados entre el nodo principal (Master) y los nodos secundarios (Replicas). La replicación es un proceso en el que se copian y aplican automáticamente los cambios realizados en el nodo principal a los nodos secundarios.
+
+### The load balancer is still a single point of failure
+Si el balanceador de carga falla, todos los clientes que intenten acceder al sitio web o la aplicación no podrán ser dirigidos correctamente a los servidores de backend y no podrán recibir una respuesta.
+
+## Task 1
+![Distributed](https://i.imgur.com/A5JYfb3.png)
+
+### Firewall
+Es una medida de seguridad que actúa como una barrera entre una red privada y una red externa. Su objetivo principal es controlar y filtrar el tráfico de red con el fin de proteger los sistemas y datos de posibles amenazas y ataques.
+El firewall examina el tráfico que entra y sale de la red según un conjunto de reglas predefinidas. Estas reglas determinan qué tipo de tráfico se permite o se bloquea, basándose en diversos criterios, como las direcciones IP, los puertos, los protocolos y otros atributos del tráfico de red.
+Al establecer estas reglas, un firewall puede bloquear el acceso no autorizado desde el exterior de la red, como intentos de intrusión o ataques maliciosos.
+
+### 3 Cortafuegos:
+El primer cortafuegos comprueba las reglas después de recibir las solicitudes y podría denegar las siguientes solicitudes. El segundo cortafuegos está trabajando en el servidor para evitar que alguien piratee según las solicitudes, y el tercer cortafuegos actúa como cortafuegos a nivel de circuito, inspeccionando la transacción de la información.
+
+### SSL - Secure Sockets Layer
+Es un protocolo de seguridad utilizado para establecer una conexión segura y cifrada entre un servidor web y un navegador web. La función principal es garantizar la confidencialidad, integridad y autenticidad de los datos transmitidos a través de Internet. Cuando se establece una conexión SSL, la información que se transmite entre el servidor y el navegador se cifra, lo que significa que solo el servidor y el cliente pueden entenderla. Esto ayuda a prevenir que los datos sean interceptados y leídos por personas no autorizadas.
+
+### Monitoreo
+Es una práctica utilizada para el control de calidad. “Lo que no se puede medir, no se puede mejorar”. Entonces, el monitoreo no solo ayuda a asegurar el mantenimiento de altos niveles de calidad, manteniendo los estándares establecidos y la consistencia, sino también para ayudar en la mejora continua del desempeño de los recursos.
+
+## Task 2
+![Segura](https://i.imgur.com/yguietk.png)
