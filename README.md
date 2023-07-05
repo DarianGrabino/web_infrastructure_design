@@ -9,7 +9,7 @@ Un servidor físico es un equipo de hardware dedicado que funciona como un servi
 
 Un servidor virtual es una instancia lógica creada mediante software de virtualización. Se divide y comparte los recursos de un servidor físico entre varios servidores virtuales, cada uno con su propio sistema operativo y configuraciones.
 
-### El Servidor ejecuta un sistema operativo
+### El servidor ejecuta un sistema operativo
 El sistema operativo es esencial para el funcionamiento de un servidor, ya que administra los recursos, interactúa con el hardware, administra servicios y aplicaciones, brinda control y seguridad, permite la programación y automatización de tareas en el servidor.
 
 ### Contenido dinamico y estatico
